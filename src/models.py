@@ -7,17 +7,6 @@ from eralchemy2 import render_er
 
 Base = declarative_base()
 
-# class Favorite(Base):
-#     __tablename__ = 'favorite'
-#     id = Column(Integer, primary_key=True)
-#     name = Column(String(250))
-#     planets_id = Column(Integer, ForeignKey('planets.id'),
-#         nullable=False)
-#     characters_id = Column(Integer, ForeignKey('characters.id'),
-#         nullable=False)
-#     vehicles_id = Column(Integer, ForeignKey('vehicles.id'),
-#         nullable=False)
-    
 followers = Table('followers',
 Base.metadata,
 Column('follower_id', Integer, ForeignKey('follower.id'), primary_key=True),
